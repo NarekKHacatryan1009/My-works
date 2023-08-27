@@ -1,0 +1,163 @@
+@import "./style/header.scss";
+@import "./style/variables.scss";
+@import "./style/mixin.scss";
+@import "./style/main.scss";
+@import "./style/footer.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 891px) {
+    .header .header_section{
+        position: relative;   
+        flex-wrap: wrap; 
+
+        .menu{
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            
+            .icon_logo{
+                width: 8vh;
+                height: 8vh;
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: block;
+
+                svg{
+                    margin-left: 12px;
+                    margin-bottom: 3.5px;
+                }
+            }
+
+            .header_menu{
+                width: 100%;
+                height: 88vh;
+                position: absolute;
+                top: 100px;
+                background-color: $rgb;
+                @include flex();
+                display: none;
+                
+                ul{
+                    flex-direction: column;
+                    margin: auto;
+                    margin: 0;
+                    padding: 0;
+                    
+                    li{ 
+                        width: 100%;
+                        padding: 20px 0;
+
+                        a{
+                            color: white;
+                            font-weight: 900;
+                            font-size: 26px;
+
+                        }
+                    }
+                }
+            }
+
+            .active{
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:540px) {
+    .header .header_section .menu{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:580px){
+    .slide .info .container{
+        width: 70%;
+        min-width: 200px;
+    }
+}
+
+@media screen and (max-width:768px){
+    footer{
+        height: auto;
+
+        .section{
+            height: auto;
+            
+            .footer_content{
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+
+                .footer_child{
+                    height: 16.1vh;
+
+                    .icons{
+                        height: auto;
+                    }
+                }
+
+                >:nth-child(2){
+                    height: 200px;
+                }
+
+                >:nth-child(3){
+                    flex-grow: 1;
+                    height: 200px;
+                }
+            }
+
+            .code_li{
+
+                .company{
+                    width: 70px;
+                    height: 70px;
+
+                    a>img{
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    sub{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .rout_menu{
+
+        .price_list{
+
+            .parent{
+                
+                .parent_content{
+                    height: 50vh;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:400px){
+    .rout_menu{
+
+        .price_list{
+
+            .parent{
+                width: 100%;
+            }
+        }
+    }
+}
+

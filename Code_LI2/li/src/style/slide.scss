@@ -1,0 +1,18 @@
+@import "./variables.scss";
+@import "./mixin.scss";
+
+.slide{
+    height: 98%;
+    @include flex();
+    justify-content: space-between;
+    box-shadow: 0 1px 6px 1px $rgb;
+
+    p{
+        padding: 8px 20px;
+        border: none;
+
+        svg{
+            font-size: 5.5vh;
+        }
+    }
+}
